@@ -18,7 +18,7 @@ xfile = openpyxl.load_workbook('C:\\Users\\dwerelius\\Desktop\\US-Vmedi-nonConta
 sheet = xfile['Sheet1']
 xfile['Sheet1']
 
-# Assigns the URL
+# Assigns the URL (taken from NPPES NPI Registry API)
 URL = "https://npiregistry.cms.hhs.gov/api/?version=2.0"
 
 # Initialize count variables and assign the total number of surgeons
