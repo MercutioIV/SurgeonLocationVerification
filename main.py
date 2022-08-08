@@ -44,12 +44,16 @@ def getInformation():
             lastName = (userdata["results"][0])["basic"]["last_name"]
             city = (userdata["results"][0])["addresses"][0]["city"]
             state = (userdata["results"][0])["addresses"][0]["state"]
+            taxDescription = (userdata["results"][0])["taxonomies"][0]["desc"]
 
             # Gets the location information from the excel sheet
             xcity = (workbook['Location/City'].iloc[x])
             xcity = xcity.upper()
             xstate = (workbook['State'].iloc[x])
             xstate = xstate.upper()
+
+            # Loads the taxonomy description into the S column
+            sheet[f'S{rowNum}'] = f'{taxDescription}'
 
             if (xcity != city):
 
@@ -93,6 +97,22 @@ def getInformation():
                 sheet[f'Q{rowNum}'].fill = PatternFill(patternType='solid',
                                                        fgColor='FC2C03')
                 sheet[f'R{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'S{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'T{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'U{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'V{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'W{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'X{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'Y{rowNum}'].fill = PatternFill(patternType='solid',
+                                                       fgColor='FC2C03')
+                sheet[f'Z{rowNum}'].fill = PatternFill(patternType='solid',
                                                        fgColor='FC2C03')
 
                 # Prints out the location statement
