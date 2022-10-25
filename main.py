@@ -1,6 +1,7 @@
 # Surgeon Location Verification
 # Written by Dylan Werelius on August 3rd 2022
 
+# Imports
 import requests
 import json
 import pandas as pd
